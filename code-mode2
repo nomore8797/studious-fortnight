@@ -19,9 +19,3 @@ function mirrorFiveV2(a, b, c, d, e) {
     valueMirror: transformed
   };
 }
-
-
-// Пример
-console.log(
-  mirrorFiveV2("alpha", 3, true, [1,2,3], "omega")
-);
