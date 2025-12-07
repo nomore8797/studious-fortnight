@@ -18,3 +18,4 @@
     "onCreateCommand": "npm install && npm run build",
     "postCreateCommand": ""
   }
+
