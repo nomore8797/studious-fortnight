@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  // Состояние для отображения сообщения Демо
   const [demoMessage, setDemoMessage] = useState("");
+  const [log, setLog] = useState([]);
+  const [status, setStatus] = useState("Платформа в облаке. Стабильность: нормальная");
+  const [notifications, setNotifications] = useState([]);
 
-  // Обработчик кнопки Демо
   const handleDemoClick = () => {
-    setDemoMessage("Демо активировано! 🎉");
+    const message = "Демо активировано! 🎉";
+    setDemoMessage(message);
+    setLog([...log, message]);
+    setNotifications([...notifications, `Новая активность: ${message}`]);
   };
 
   return (
@@ -18,32 +22,97 @@ function App() {
       </header>
 
       <main>
-        <button
-          onClick={handleDemoClick}
-          style={{
-            padding: "1rem 2rem",
-            fontSize: "1rem",
-            cursor: "pointer",
-            marginBottom: "1rem"
-          }}
-        >
-          Демо
-        </button>
-
-        {demoMessage && (
-          <div
+        {/* Кнопка Демо */}
+        <section style={{ marginBottom: "1rem" }}>
+          <button
+            onClick={handleDemoClick}
             style={{
+              padding: "1rem 2rem",
+              fontSize: "1rem",
+              cursor: "pointer",
+              marginBottom: "1rem",
+              backgroundColor: "#00796b",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px"
+            }}
+          >
+            Демо
+          </button>
+          {demoMessage && (
+            <div style={{
               marginTop: "1rem",
               padding: "1rem",
               backgroundColor: "#e0f7fa",
               borderRadius: "5px",
               color: "#00796b",
               fontWeight: "bold"
-            }}
-          >
-            {demoMessage}
+            }}>
+              {demoMessage}
+            </div>
+          )}
+        </section>
+
+        {/* Панель состояния */}
+        <section style={{ marginTop: "1rem" }}>
+          <h2>Панель состояния:</h2>
+          <div style={{
+            padding: "0.5rem",
+            backgroundColor: "#fff3e0",
+            borderRadius: "5px",
+            color: "#e65100",
+            fontWeight: "bold"
+          }}>
+            {status}
           </div>
-        )}
+        </section>
+
+        {/* История действий Демо */}
+        <section style={{ marginTop: "1rem" }}>
+          <h2>История действий Демо:</h2>
+          <ul style={{ paddingLeft: "1.5rem" }}>
+            {log.map((item, index) => (<li key={index}>{item}</li>))}
+          </ul>
+        </section>
+
+        {/* Уведомления */}
+        <section style={{ marginTop: "1rem" }}>
+          <h2>Уведомления:</h2>
+          <ul style={{ paddingLeft: "1.5rem", color: "#d84315" }}>
+            {notifications.map((note, index) => (<li key={index}>{note}</li>))}
+          </ul>
+        </section>
+
+        {/* Список услуг */}
+        <section style={{ marginTop: "2rem" }}>
+          <h2>Доступные услуги:</h2>
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <div style={{
+              padding: "1rem",
+              backgroundColor: "#e1f5fe",
+              borderRadius: "5px",
+              fontWeight: "bold",
+              flex: "1 0 200px",
+              textAlign: "center"
+            }}>Анализ рынка</div>
+            <div style={{
+              padding: "1rem",
+              backgroundColor: "#e1f5fe",
+              borderRadius: "5px",
+              fontWeight: "bold",
+              flex: "1 0 200px",
+              textAlign: "center"
+            }}>Оптимизация процессов</div>
+            <div style={{
+              padding: "1rem",
+              backgroundColor: "#e1f5fe",
+              borderRadius: "5px",
+              fontWeight: "bold",
+              flex: "1 0 200px",
+              textAlign: "center"
+            }}>Отчёты и рекомендации</div>
+          </div>
+        </section>
       </main>
 
       <footer style={{ marginTop: "2rem", fontSize: "0.9rem", color: "#555" }}>
