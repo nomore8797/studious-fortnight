@@ -14,6 +14,12 @@ function App() {
     setNotifications([...notifications, `Новая активность: ${message}`]);
   };
 
+  const handleServiceClick = (serviceName) => {
+    const message = `Вы выбрали услугу: ${serviceName}`;
+    setLog([...log, message]);
+    setNotifications([...notifications, message]);
+  };
+
   return (
     <div className="App" style={{ padding: "2rem", fontFamily: "sans-serif" }}>
       <header>
@@ -83,34 +89,30 @@ function App() {
           </ul>
         </section>
 
-        {/* Список услуг */}
+        {/* Список услуг (кликабельные блоки) */}
         <section style={{ marginTop: "2rem" }}>
           <h2>Доступные услуги:</h2>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <div style={{
-              padding: "1rem",
-              backgroundColor: "#e1f5fe",
-              borderRadius: "5px",
-              fontWeight: "bold",
-              flex: "1 0 200px",
-              textAlign: "center"
-            }}>Анализ рынка</div>
-            <div style={{
-              padding: "1rem",
-              backgroundColor: "#e1f5fe",
-              borderRadius: "5px",
-              fontWeight: "bold",
-              flex: "1 0 200px",
-              textAlign: "center"
-            }}>Оптимизация процессов</div>
-            <div style={{
-              padding: "1rem",
-              backgroundColor: "#e1f5fe",
-              borderRadius: "5px",
-              fontWeight: "bold",
-              flex: "1 0 200px",
-              textAlign: "center"
-            }}>Отчёты и рекомендации</div>
+            {["Анализ рынка", "Оптимизация процессов", "Отчёты и рекомендации"].map((service) => (
+              <div
+                key={service}
+                onClick={() => handleServiceClick(service)}
+                style={{
+                  padding: "1rem",
+                  backgroundColor: "#e1f5fe",
+                  borderRadius: "5px",
+                  fontWeight: "bold",
+                  flex: "1 0 200px",
+                  textAlign: "center",
+                  cursor: "pointer",
+                  transition: "transform 0.1s",
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = "scale(1.05)"}
+                onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+              >
+                {service}
+              </div>
+            ))}
           </div>
         </section>
       </main>
