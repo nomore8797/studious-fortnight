@@ -2,22 +2,30 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [demoMessage, setDemoMessage] = useState("");
-  const [log, setLog] = useState([]);
-  const [status, setStatus] = useState("Платформа в облаке. Стабильность: нормальная");
-  const [notifications, setNotifications] = useState([]);
+  const [platformState, setPlatformState] = useState({
+    demoMessage: "",
+    log: [],
+    status: "Платформа в облаке. Стабильность: нормальная",
+    notifications: []
+  });
 
   const handleDemoClick = () => {
     const message = "Демо активировано! 🎉";
-    setDemoMessage(message);
-    setLog([...log, message]);
-    setNotifications([...notifications, `Новая активность: ${message}`]);
+    setPlatformState(prev => ({
+      ...prev,
+      demoMessage: message,
+      log: [...prev.log, message],
+      notifications: [...prev.notifications, `Новая активность: ${message}`]
+    }));
   };
 
   const handleServiceClick = (serviceName) => {
     const message = `Вы выбрали услугу: ${serviceName}`;
-    setLog([...log, message]);
-    setNotifications([...notifications, message]);
+    setPlatformState(prev => ({
+      ...prev,
+      log: [...prev.log, message],
+      notifications: [...prev.notifications, message]
+    }));
   };
 
   return (
@@ -45,7 +53,7 @@ function App() {
           >
             Демо
           </button>
-          {demoMessage && (
+          {platformState.demoMessage && (
             <div style={{
               marginTop: "1rem",
               padding: "1rem",
@@ -54,7 +62,7 @@ function App() {
               color: "#00796b",
               fontWeight: "bold"
             }}>
-              {demoMessage}
+              {platformState.demoMessage}
             </div>
           )}
         </section>
@@ -69,7 +77,7 @@ function App() {
             color: "#e65100",
             fontWeight: "bold"
           }}>
-            {status}
+            {platformState.status}
           </div>
         </section>
 
@@ -77,7 +85,7 @@ function App() {
         <section style={{ marginTop: "1rem" }}>
           <h2>История действий Демо:</h2>
           <ul style={{ paddingLeft: "1.5rem" }}>
-            {log.map((item, index) => (<li key={index}>{item}</li>))}
+            {platformState.log.map((item, index) => (<li key={index}>{item}</li>))}
           </ul>
         </section>
 
@@ -85,7 +93,7 @@ function App() {
         <section style={{ marginTop: "1rem" }}>
           <h2>Уведомления:</h2>
           <ul style={{ paddingLeft: "1.5rem", color: "#d84315" }}>
-            {notifications.map((note, index) => (<li key={index}>{note}</li>))}
+            {platformState.notifications.map((note, index) => (<li key={index}>{note}</li>))}
           </ul>
         </section>
 
