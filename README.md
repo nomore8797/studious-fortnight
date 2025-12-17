@@ -68,3 +68,11 @@ This section has moved here: [https://vitejs.dev/guide/build.html](https://vitej
 ### Troubleshooting
 
 This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+
+## Размещение платформы в облаке
+
+1. Клонируем репозиторий:
+   ```bash
+   git clone https://github.com/nomore8797/studious-fortnight.git
+   cd studious-fortnight
+   npm install
