@@ -1,33 +1,54 @@
-import { useState } from 'react';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [demoMessage, setDemoMessage] = useState('Нажми кнопку, чтобы увидеть демо!');
+  // Состояние для отображения сообщения Демо
+  const [demoMessage, setDemoMessage] = useState("");
 
+  // Обработчик кнопки Демо
   const handleDemoClick = () => {
-    setDemoMessage('Демо платформы активировано! 🚀');
+    setDemoMessage("Демо активировано! 🎉");
   };
 
   return (
-    <div style={{ padding: '40px', textAlign: 'center', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Консалтинговая платформа</h1>
-      <p>Добро пожаловать! Платформа теперь в облаке Render.</p>
+    <div className="App" style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+      <header>
+        <h1>Консалтинговая платформа</h1>
+        <p>Добро пожаловать в демо-версию платформы</p>
+      </header>
 
-      <button
-        onClick={handleDemoClick}
-        style={{
-          padding: '10px 20px',
-          fontSize: '16px',
-          cursor: 'pointer',
-          backgroundColor: '#007bff',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '5px'
-        }}
-      >
-        Демо
-      </button>
+      <main>
+        <button
+          onClick={handleDemoClick}
+          style={{
+            padding: "1rem 2rem",
+            fontSize: "1rem",
+            cursor: "pointer",
+            marginBottom: "1rem"
+          }}
+        >
+          Демо
+        </button>
 
-      <p style={{ marginTop: '20px', fontWeight: 'bold' }}>{demoMessage}</p>
+        {demoMessage && (
+          <div
+            style={{
+              marginTop: "1rem",
+              padding: "1rem",
+              backgroundColor: "#e0f7fa",
+              borderRadius: "5px",
+              color: "#00796b",
+              fontWeight: "bold"
+            }}
+          >
+            {demoMessage}
+          </div>
+        )}
+      </main>
+
+      <footer style={{ marginTop: "2rem", fontSize: "0.9rem", color: "#555" }}>
+        © 2025 Консалтинговая платформа
+      </footer>
     </div>
   );
 }
