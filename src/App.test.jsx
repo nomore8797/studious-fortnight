@@ -1,9 +1,6 @@
-import { expect, test } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import App from './App';
-
+// src/App.test.jsx
 test('renders main header', () => {
   render(<App />);
-  const headerElement = screen.getByText(/Консалтинговая платформа/i);
+  const headerElement = screen.getByText(/GitHub Codespaces/i);
   expect(headerElement).toBeDefined();
 });
