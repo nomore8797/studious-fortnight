@@ -1,0 +1,21 @@
+function mirrorValueV2(x) {
+  if (typeof x === "string") return x.toUpperCase();
+  if (typeof x === "number" && !Number.isNaN(x)) return x ** 2;
+  if (typeof x === "boolean") return !x;
+  if (Array.isArray(x)) return x.slice().reverse().join("");
+  return null;
+}
+
+function mirrorFiveV2(a, b, c, d, e) {
+
+  // Центральное зеркало
+  const reordered = [c, b, a, e, d];
+
+  const transformed = reordered.map(mirrorValueV2);
+
+  return {
+    source: [a, b, c, d, e],
+    positionMirror: reordered,
+    valueMirror: transformed
+  };
+
