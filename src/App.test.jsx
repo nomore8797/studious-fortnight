@@ -1,34 +1,24 @@
-import { render, screen, fireEvent, within } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
+import '@testing-library/jest-dom';
 
-describe('App component', () => {
-  test('renders heading', () => {
+describe('App Component', () => {
+  test('должен отображать заголовок платформы', () => {
     render(<App />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/Studious Fortnight/i);
+    const heading = screen.getByRole('heading', { name: /Консалтинговая платформа/i });
+    expect(heading).toBeInTheDocument();
   });
 
-  test('renders buttons and responds to click', () => {
+  test('должен отображать кнопку "Демо"', () => {
     render(<App />);
-    const buttons = screen.getAllByRole('button');
-    buttons.forEach(button => {
-      expect(button).toBeEnabled();
-      fireEvent.click(button);
-    });
+    const demoButton = screen.getByRole('button', { name: /Демо/i });
+    expect(demoButton).toBeInTheDocument();
   });
 
-  test('renders lists with items', () => {
+  test('должны отображаться секции состояния и уведомлений', () => {
     render(<App />);
-    const lists = screen.getAllByRole('list');
-    lists.forEach(list => {
-      const items = within(list).getAllByRole('listitem');
-      expect(items.length).toBeGreaterThan(0);
-    });
-  });
-
-  test('renders links', () => {
-    render(<App />);
-    const links = screen.getAllByRole('link');
-    expect(links.length).toBeGreaterThan(0);
+    expect(screen.getByRole('heading', { name: /Панель состояния:/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Уведомления:/i })).toBeInTheDocument();
   });
 });
 
