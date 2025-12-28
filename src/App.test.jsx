@@ -1,9 +1,28 @@
-// src/App.test.jsx
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeDefined();
+describe('App component', () => {
+
+  test('renders main header', () => {
+    render(<App />);
+    const headerElement = screen.getByText(/learn react/i);
+    expect(headerElement).toBeInTheDocument();
+  });
+
+  test('renders links', () => {
+    render(<App />);
+    const linkElements = screen.getAllByRole('link');
+    expect(linkElements.length).toBeGreaterThan(0);
+  });
+
+  // Дополнительно: пример проверки кнопки, если она есть
+  test('button click works', () => {
+    render(<App />);
+    const buttonElement = screen.queryByRole('button');
+    if (buttonElement) {
+      fireEvent.click(buttonElement);
+      expect(buttonElement).toBeInTheDocument(); // или другая проверка после клика
+    }
+  });
+
 });
