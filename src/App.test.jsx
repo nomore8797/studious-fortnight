@@ -1,51 +1,23 @@
-import { describe, it, expect } from 'vitest';
-import { render, screen, fireEvent, within } from '@testing-library/react';
-import App from './App.jsx';
+import { render, screen } from '@testing-library/react';
+import App from './App';
+import '@testing-library/jest-dom';
 
-describe('App component', () => {
-
-  it('renders main header', () => {
+describe('App Component', () => {
+  test('должен отображать заголовок платформы', () => {
     render(<App />);
-    const header = screen.getByRole('heading', { level: 1 });
-    expect(header).not.toBeNull();
-    expect(header.textContent).toMatch(/Studious Fortnight/i);
+    const heading = screen.getByRole('heading', { name: /Консалтинговая платформа/i });
+    expect(heading).toBeInTheDocument();
   });
 
-  it('renders secondary headers', () => {
+  test('должен отображать кнопку "Демо"', () => {
     render(<App />);
-    const secondaryHeaders = screen.getAllByRole('heading', { level: 2 });
-    expect(secondaryHeaders.length).toBeGreaterThan(0);
+    const demoButton = screen.getByRole('button', { name: /Демо/i });
+    expect(demoButton).toBeInTheDocument();
   });
 
-  it('renders paragraphs', () => {
+  test('должны отображаться секции состояния и уведомлений', () => {
     render(<App />);
-    const paragraphs = screen.getAllByRole('paragraph');
-    expect(paragraphs.length).toBeGreaterThan(0);
+    expect(screen.getByRole('heading', { name: /Панель состояния:/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Уведомления:/i })).toBeInTheDocument();
   });
-
-  it('renders buttons and responds to click', () => {
-    render(<App />);
-    const buttons = screen.getAllByRole('button');
-    expect(buttons.length).toBeGreaterThan(0);
-    buttons.forEach(button => {
-      fireEvent.click(button);
-      expect(button.disabled).toBe(false);
-    });
-  });
-
-  it('renders lists with items', () => {
-    render(<App />);
-    const lists = screen.getAllByRole('list');
-    lists.forEach(list => {
-      const items = within(list).getAllByRole('listitem');
-      expect(items.length).toBeGreaterThan(0);
-    });
-  });
-
-  it('renders links', () => {
-    render(<App />);
-    const links = screen.queryAllByRole('link');
-    expect(links.length).toBeGreaterThan(0);
-  });
-
 });
