@@ -1,8 +1,9 @@
+// src/App.test.jsx
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders main header', () => {
+test('renders learn react link', () => {
   render(<App />);
-  const headerElement = screen.getByText(/GitHub Codespaces/i);
-  expect(headerElement).toBeDefined();
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeDefined();
 });
