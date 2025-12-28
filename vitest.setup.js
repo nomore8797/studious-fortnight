@@ -1,7 +1,2 @@
 // src/vitest.setup.js
 
-import { expect } from 'vitest';
-import matchers from '@testing-library/jest-dom/matchers';
-
-// Расширяем expect для Vitest
-expect.extend(matchers);
