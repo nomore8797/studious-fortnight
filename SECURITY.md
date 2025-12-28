@@ -1,85 +1,58 @@
 # Security Policy
 
-## Project status
+## Supported Versions
 
-This repository is a **research and experimental project**.
+This project is under active development.  
+Security updates apply **only to the latest version** in the `main` branch.
 
-The codebase may include:
-- unfinished features;
-- experimental architectural decisions;
-- intentional instability for research purposes.
-
-This project is **not production-ready software** and comes **without guarantees of stability, safety, or fitness for any particular purpose**.
-
----
-
-## Supported versions
-
-Only the **latest version on the default branch** is considered for security review.
-
-Older commits, forks, or experimental branches are **not supported**.
+| Version | Supported |
+|--------|-----------|
+| main   | ✅ Yes     |
+| others| ❌ No      |
 
 ---
 
-## What is considered a security vulnerability
+## Reporting a Vulnerability
 
-We consider security issues that may reasonably lead to:
+If you discover a security vulnerability, please **do not open a public issue**.
 
-- Remote Code Execution (RCE)
-- Unauthorized access to local or remote resources
-- Leakage of sensitive data
-- Dependency or supply-chain vulnerabilities affecting execution safety
-- CI/CD or workflow configurations that expose secrets or execution context
+Instead, report it responsibly using one of the following methods:
 
----
-
-## What is NOT considered a security vulnerability
-
-The following are **out of scope**:
-
-- Architectural or conceptual disagreements
-- Experimental design choices
-- Performance issues
-- Lack of features or missing validations
-- Crashes caused by incomplete or research-stage code
-- Issues arising from running the project in unsupported environments
-
----
-
-## Reporting a vulnerability
-
-If you believe you have found a **real security vulnerability**, please report it **privately** using GitHub Security Advisories:
-
-- Do **not** open a public issue
-- Do **not** publish the vulnerability before disclosure
-
-Use the Security tab → “Report a vulnerability”.
+- GitHub **Private Vulnerability Reporting**
+- Or contact the maintainer via GitHub profile messaging
 
 Please include:
-- a clear description of the issue;
-- steps to reproduce (if applicable);
-- the potential impact.
+- A clear description of the issue
+- Steps to reproduce (if applicable)
+- Potential impact assessment
+
+We aim to review reports within a reasonable time frame.
 
 ---
 
-## Response policy
+## Automated Security
 
-As this is a research project:
-
-- There are **no guaranteed response times**
-- Fixes may be delayed, partial, or declined
-- Some reports may be acknowledged but not addressed
-
-All reports will be reviewed **in good faith**.
+This repository uses:
+- **GitHub Dependabot** for dependency monitoring
+- **CodeQL** for automated code scanning
+- CI workflows to prevent insecure changes from being merged
 
 ---
 
-## Responsible disclosure
+## Scope
 
-We appreciate responsible disclosure and respectful communication.
+This policy applies to:
+- Source code
+- CI/CD workflows
+- Dependencies defined in the repository
 
-Abusive, coercive, or deadline-driven demands will be ignored.
+It does **not** cover:
+- Third-party services
+- External integrations outside this repository
 
 ---
 
-Thank you for contributing to a safer research environment.
+## Acknowledgements
+
+Responsible disclosure is appreciated.  
+Thank you for helping improve the security of this project.
