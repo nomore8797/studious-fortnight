@@ -1,11 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './vitest.setup.js'
-  }
-})
+    setupFiles: resolve(__dirname, 'src/vitest.setup.js'),
+  },
+});
