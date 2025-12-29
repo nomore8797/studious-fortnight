@@ -21,3 +21,4 @@ describe('App Component', () => {
     expect(screen.getByRole('heading', { name: /Уведомления:/i })).toBeInTheDocument();
   });
 });
+
