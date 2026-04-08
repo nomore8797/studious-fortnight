@@ -1,8 +1,8 @@
 dependabot/npm_and_yarn/multi-bf05dc1ecf
 import React from 'react';
 import React, { useState } from "react";
-import "./App.css"; nomore8797-patch-2
-
+import "./App.css"; nomore8797-patch-2 
+dependabot/npm_and_yarn/multi-bf05dc1ecf
 function App() {
   const [platformState, setPlatformState] = useState({
     demoMessage: "",
@@ -31,6 +31,8 @@ function App() {
   };
 
   return ( dependabot/npm_and_yarn/multi-bf05dc1ecf
+function App() { 
+  export default ( main
     <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
     <div className="App" style={{ padding: "2rem", fontFamily: "sans-serif" }}> nomore8797-patch-2
       <header>
@@ -174,4 +176,5 @@ function App() {
   );
 }
 
-export default App;
+return App)
+  
