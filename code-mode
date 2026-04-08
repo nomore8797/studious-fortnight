@@ -27,7 +27,4 @@ def mirror_five(a, b, c, d, e):
 if __name__ == "__main__":
     res = mirror_five("hello", 42, [1,2,3], "abc", -7)
     from pprint import pprint
-    dependabot/npm_and_yarn/lodash-4.18.1
     pprint(res)
-    pprint(res)
-    nomore8797-patch-2
