@@ -1,3 +1,9 @@
+dependabot/npm_and_yarn/vite-6.4.2
+import React from 'react';
+
+function App() {
+  return (
+    <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
 dependabot/npm_and_yarn/multi-bf05dc1ecf
 import React from 'react';
 import React, { useState } from "react";
@@ -33,12 +39,15 @@ function App() {
   return ( dependabot/npm_and_yarn/multi-bf05dc1ecf
     <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
     <div className="App" style={{ padding: "2rem", fontFamily: "sans-serif" }}> nomore8797-patch-2
+ nomore8797-patch-2
       <header>
         <h1>Консалтинговая платформа</h1>
         <p>Добро пожаловать в демо-версию платформы</p>
       </header>
-
+ dependabot/npm_and_yarn/vite-6.4.2
+      <main>
       <main> dependabot/npm_and_yarn/multi-bf05dc1ecf
+ nomore8797-patch-2
         <section style={{ marginBottom: '1rem' }}>
           <button
             style={{
@@ -48,7 +57,11 @@ function App() {
               marginBottom: '1rem',
               backgroundColor: 'rgb(0, 121, 107)',
               color: '#fff',
-              borderRadius: '5px',
+              borderRadius: '5px', dependabot/npm_and_yarn/vite-6.4.2
+            }}
+          >
+            Демо
+          </button>
         {/* Кнопка Демо */}
         <section style={{ marginBottom: "1rem" }}>
           <button
@@ -65,7 +78,8 @@ function App() {
             }}
           >
             Демо
-          </button> dependabot/npm_and_yarn/multi-bf05dc1ecf
+          </button> dependabot/npm_and_yarn/multi-bf05dc1ecf 
+nomore8797-patch-2
         </section>
 
         <section style={{ marginTop: '1rem' }}>
@@ -94,7 +108,7 @@ function App() {
         </section>
       </main>
 
-      <footer style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'rgb(85, 85, 85)' }}>
+      <footer style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'rgb(85, 85, 85)' }}> dependabot/npm_and_yarn/vite-6.4.2
           {platformState.demoMessage && (
             <div style={{
               marginTop: "1rem",
@@ -167,7 +181,8 @@ function App() {
         </section>
       </main>
 
-      <footer style={{ marginTop: "2rem", fontSize: "0.9rem", color: "#555" }}> nomore8797-patch-2
+      <footer style={{ marginTop: "2rem", fontSize: "0.9rem", color: "#555" }}> nomore8797-patch-2 
+nomore8797-patch-2
         © 2025 Консалтинговая платформа
       </footer>
     </div>
