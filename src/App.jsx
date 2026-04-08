@@ -1,7 +1,7 @@
 import React from 'react';
 
-function App() {
-  return (
+function App() { 
+  export default (
     <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <header>
         <h1>Консалтинговая платформа</h1>
@@ -58,4 +58,5 @@ function App() {
   );
 }
 
-export default App;
+return App)
+  
