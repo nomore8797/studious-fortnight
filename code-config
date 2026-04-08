@@ -1,0 +1,22 @@
+class Block:
+    def __init__(self, block_id: str, block_type: str, data=None):
+        self.id = block_id
+        self.type = block_type
+        self.data = data or {}
+        self.connections = []
+
+    def connect(self, other_block):
+        if other_block not in self.connections:
+            self.connections.append(other_block)
+
+    def disconnect(self, other_block):
+        if other_block in self.connections:
+            self.connections.remove(other_block)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "type": self.type,
+            "data": self.data,
+            "connections": [b.id for b in self.connections]
+        }
