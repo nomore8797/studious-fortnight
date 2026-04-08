@@ -1,9 +1,11 @@
-dependabot/npm_and_yarn/vite-6.4.2
+ dependabot/npm_and_yarn/rollup-4.60.1
+dependabot/npm_and_yarn/vite-6.4.2 
+nomore8797-patch-2
 import React from 'react';
 
 function App() {
   return (
-    <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+    <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}> dependabot/npm_and_yarn/rollup-4.60.1
 dependabot/npm_and_yarn/multi-bf05dc1ecf
 import React from 'react';
 import React, { useState } from "react";
@@ -40,13 +42,17 @@ function App() {
     <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
     <div className="App" style={{ padding: "2rem", fontFamily: "sans-serif" }}> nomore8797-patch-2
  nomore8797-patch-2
+ nomore8797-patch-2
       <header>
         <h1>Консалтинговая платформа</h1>
         <p>Добро пожаловать в демо-версию платформы</p>
-      </header>
+      </header> dependabot/npm_and_yarn/rollup-4.60.1
+
+      <main>
  dependabot/npm_and_yarn/vite-6.4.2
       <main>
       <main> dependabot/npm_and_yarn/multi-bf05dc1ecf
+ nomore8797-patch-2 
  nomore8797-patch-2
         <section style={{ marginBottom: '1rem' }}>
           <button
@@ -56,12 +62,14 @@ function App() {
               cursor: 'pointer',
               marginBottom: '1rem',
               backgroundColor: 'rgb(0, 121, 107)',
-              color: '#fff',
-              borderRadius: '5px', dependabot/npm_and_yarn/vite-6.4.2
+              color: '#fff', dependabot/npm_and_yarn/rollup-4.60.1
+              borderRadius: '5px',
+              borderRadius: '5px', dependabot/npm_and_yarn/vite-6.4.2 
+              nomore8797-patch-2
             }}
           >
             Демо
-          </button>
+          </button> dependabot/npm_and_yarn/rollup-4.60.1
         {/* Кнопка Демо */}
         <section style={{ marginBottom: "1rem" }}>
           <button
@@ -79,7 +87,8 @@ function App() {
           >
             Демо
           </button> dependabot/npm_and_yarn/multi-bf05dc1ecf 
-nomore8797-patch-2
+nomore8797-patch- 
+  nomore8797-patch-2
         </section>
 
         <section style={{ marginTop: '1rem' }}>
@@ -106,8 +115,8 @@ nomore8797-patch-2
           <h2>Уведомления:</h2>
           <ul style={{ paddingLeft: '1.5rem', color: 'rgb(216, 67, 21)' }} />
         </section>
-      </main>
-
+      </main> dependabot/npm_and_yarn/rollup-4.60.1
+      <footer style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'rgb(85, 85, 85)' }}>
       <footer style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'rgb(85, 85, 85)' }}> dependabot/npm_and_yarn/vite-6.4.2
           {platformState.demoMessage && (
             <div style={{
@@ -182,6 +191,7 @@ nomore8797-patch-2
       </main>
 
       <footer style={{ marginTop: "2rem", fontSize: "0.9rem", color: "#555" }}> nomore8797-patch-2 
+nomore8797-patch-2 
 nomore8797-patch-2
         © 2025 Консалтинговая платформа
       </footer>
