@@ -1,0 +1,3 @@
+// src/vitest.setup.js
+
+
