@@ -1,4 +1,7 @@
- dependabot/npm_and_yarn/multi-bf05dc1ecf
+dependabot/npm_and_yarn/vite-6.4.2
+dependabot/npm_and_yarn/vite-6.4.2
+dependabot/npm_and_yarn/vite-6.4.2
+dependabot/npm_and_yarn/multi-bf05dc1ecf
 dependabot/npm_and_yarn/multi-bf05dc1ecf
 import React from 'react';
 import React, { useState } from "react";
@@ -11,8 +14,9 @@ function App() {
     status: "Платформа в облаке. Стабильность: нормальная",
     notifications: []
   });
-
+ main
 dependabot/npm_and_yarn/lodash-4.18.1
+ main
 import React from 'react';
 import React, { useState } from "react";
 import "./App.css"; nomore8797-patch-2
@@ -50,14 +54,59 @@ function App() {
   main
 function App() { 
   export default ( main
+    <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}> dependabot/npm_and_yarn/vite-6.4.2
+dependabot/npm_and_yarn/multi-bf05dc1ecf
+import React from 'react';
+import React, { useState } from "react";
+import "./App.css"; nomore8797-patch-2
+
+function App() {
+  const [platformState, setPlatformState] = useState({
+    demoMessage: "",
+    log: [],
+    status: "Платформа в облаке. Стабильность: нормальная",
+    notifications: []
+  });
+
+  const handleDemoClick = () => {
+    const message = "Демо активировано! 🎉";
+    setPlatformState(prev => ({
+      ...prev,
+      demoMessage: message,
+      log: [...prev.log, message],
+      notifications: [...prev.notifications, `Новая активность: ${message}`]
+    }));
+  };
+
+  const handleServiceClick = (serviceName) => {
+    const message = `Вы выбрали услугу: ${serviceName}`;
+    setPlatformState(prev => ({
+      ...prev,
+      log: [...prev.log, message],
+      notifications: [...prev.notifications, message]
+    }));
+  };
+
+  return ( dependabot/npm_and_yarn/multi-bf05dc1ecf
     <div className="App" style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
     <div className="App" style={{ padding: "2rem", fontFamily: "sans-serif" }}> nomore8797-patch-2
+ nomore8797-patch-2
+    <div className="App" style={{ padding: "2rem", fontFamily: "sans-serif" }}> nomore8797-patch-2
+ main
       <header>
         <h1>Консалтинговая платформа</h1>
         <p>Добро пожаловать в демо-версию платформы</p>
       </header>
+ dependabot/npm_and_yarn/vite-6.4.2
+ dependabot/npm_and_yarn/vite-6.4.2
+ dependabot/npm_and_yarn/vite-6.4.2
+      <main>
+      <main> dependabot/npm_and_yarn/multi-bf05dc1ecf
+ nomore8797-patch-2
+
  dependabot/npm_and_yarn/multi-bf05dc1ecf
       <main> dependabot/npm_and_yarn/multi-bf05dc1ecf
+       main
       <main> dependabot/npm_and_yarn/lodash-4.18.1
        main
         <section style={{ marginBottom: '1rem' }}>
@@ -68,7 +117,30 @@ function App() {
               cursor: 'pointer',
               marginBottom: '1rem',
               backgroundColor: 'rgb(0, 121, 107)',
-              color: '#fff',
+              color: '#fff', dependabot/npm_and_yarn/vite-6.4.2
+              borderRadius: '5px', dependabot/npm_and_yarn/vite-6.4.2
+            }}
+          >
+            Демо
+          </button>
+        {/* Кнопка Демо */}
+        <section style={{ marginBottom: "1rem" }}>
+          <button
+            onClick={handleDemoClick}
+            style={{
+              padding: "1rem 2rem",
+              fontSize: "1rem",
+              cursor: "pointer",
+              marginBottom: "1rem",
+              backgroundColor: "#00796b",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px" nomore8797-patch-2
+            }}
+          >
+            Демо
+          </button> dependabot/npm_and_yarn/multi-bf05dc1ecf 
+nomore8797-patch-2
               borderRadius: '5px',
         {/* Кнопка Демо */}
         <section style={{ marginBottom: "1rem" }}>
@@ -89,7 +161,10 @@ function App() {
  dependabot/npm_and_yarn/multi-bf05dc1ecf
           </button> dependabot/npm_and_yarn/multi-bf05dc1ecf
           </button> dependabot/npm_and_yarn/lodash-4.18.1
+ dependabot/npm_and_yarn/vite-6.4.2
+          main
          main
+        main
         </section>
 
         <section style={{ marginTop: '1rem' }}>
@@ -116,9 +191,9 @@ function App() {
           <h2>Уведомления:</h2>
           <ul style={{ paddingLeft: '1.5rem', color: 'rgb(216, 67, 21)' }} />
         </section>
-      </main>
-
-      <footer style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'rgb(85, 85, 85)' }}>
+      </main> dependabot/npm_and_yarn/vite-6.4.2
+      <footer style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'rgb(85, 85, 85)' }}> dependabot/npm_and_yarn/vite-6.4.2
+      <footer style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'rgb(85, 85, 85)' }}> main
           {platformState.demoMessage && (
             <div style={{
               marginTop: "1rem",
@@ -189,9 +264,11 @@ function App() {
             ))}
           </div>
         </section>
-      </main>
-
+      </main> dependabot/npm_and_yarn/vite-6.4.2
+      <footer style={{ marginTop: "2rem", fontSize: "0.9rem", color: "#555" }}> nomore8797-patch-2 
+nomore8797-patch-2
       <footer style={{ marginTop: "2rem", fontSize: "0.9rem", color: "#555" }}> nomore8797-patch-2
+main
         © 2025 Консалтинговая платформа
       </footer>
     </div>
