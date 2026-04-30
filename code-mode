@@ -1,0 +1,30 @@
+def mirror_value(x):
+    """Зеркалит значение по типу."""
+    if isinstance(x, str):
+        return x[::-1]
+    if isinstance(x, (int, float, complex)) and not isinstance(x, bool):
+        return -x
+    if isinstance(x, (list, tuple)):
+        rev = type(x)(x[::-1])
+        return rev
+    # fallback: оставляем как есть
+    return x
+
+def mirror_five(a, b, c, d, e):
+    """Возвращает (оригинал_tuple, зеркальный_tuple, per_value_mirror_tuple)."""
+    originals = (a, b, c, d, e)
+    # зеркалим порядок
+    reversed_by_position = originals[::-1]
+    # зеркалим сами значения по типу (и тоже в зеркальном порядке)
+    mirrored_values = tuple(mirror_value(x) for x in reversed_by_position)
+    return {
+        "originals": originals,
+        "reversed_positions": reversed_by_position,
+        "mirrored_values": mirrored_values
+    }
+
+# Пример использования
+if __name__ == "__main__":
+    res = mirror_five("hello", 42, [1,2,3], "abc", -7)
+    from pprint import pprint
+    pprint(res)
